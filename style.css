@@ -27,6 +27,7 @@ html {
     font-family: var(--font);
     font-size: 16px;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 *,
@@ -175,7 +176,7 @@ p {
     max-width: 800px;
 }
 
-.contact-form>* {
+.contact-form>* { /*todos los hijos directos */
     padding: 0.5rem;
     margin: 1rem auto;
     display: block;
@@ -209,7 +210,7 @@ p {
     opacity: 0.75;
 }
 
-.contact-form *::placeholder {
+.contact-form *::placeholder { /* todo los elementos hijos que tengan placeholder*/
     color: var(--gray-dark-color);
 }
 
@@ -227,7 +228,7 @@ p {
     fill: var(--first-color);
 }
 
-.modal#gracias:target {
+.modal#gracias:target { /*Cuando tenga el id gracias y le haces click*/
     opacity: 1;
     pointer-events: auto;
 }
