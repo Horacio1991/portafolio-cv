@@ -34,16 +34,16 @@
       .then((res) => (res.ok ? res.json() : Promise.reject(res)))
       .then((json) => {
         console.log(json);
-        location.hash = "#gracias";
+        location.hash = "#gracias"; //Modifico la URL con #gracias para que active la vetnana modal
         $form.reset();
       })
       .catch((err) => {
         console.log(err);
         let message =
-          err.statusText || "Ocurrió un error al enviar, intenta nuevamente";
+          err.statusText || "Ocurrió un error al enviar, intenta nuevamente"; //Si no existe status text va el mensaje personalizado
         $response.querySelector(
           "h3"
-        ).innerHTML = `Error ${err.status}: ${message}`;
+        ).innerHTML = `Error ${err.status}: ${message}`; 
       })
       .finally(() => {
         $loader.classList.add("none");
