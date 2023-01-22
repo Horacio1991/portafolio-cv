@@ -124,7 +124,7 @@ p {
 .carousel .slides {
     margin: auto;
     padding: 0 0 2rem 2rem;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     /* 100% por cada slide - 400% porque son 4 slides*/
     width: 400%;
     display: flex;
