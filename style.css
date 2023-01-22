@@ -113,8 +113,8 @@ p {
 }
 
 .carousel {
-    margin: 2rem auto;
-    padding: 2rem 0rem 2rem 4rem;
+    margin: auto;
+    padding: 2rem 0rem;
     max-width: 800px;
     text-align: center;
     overflow-x: hidden;
@@ -122,13 +122,15 @@ p {
 }
 
 .carousel .slides {
-    padding-left: 0;
+    margin: auto;
+    padding: 0 0 2rem 2rem;
+    border: 2px solid red;
     /* 100% por cada slide - 400% porque son 4 slides*/
     width: 400%;
     display: flex;
     list-style: none;
     transition: transform 0.5s ease-in-out;
-    animation: carousel-slide 12s ease-in-out 3s;
+    /* animation: carousel-slide 12s ease-in-out 3s; */
 }
 
 .carousel input {
@@ -176,7 +178,8 @@ p {
     max-width: 800px;
 }
 
-.contact-form>* { /*todos los hijos directos */
+.contact-form>* {
+    /*todos los hijos directos */
     padding: 0.5rem;
     margin: 1rem auto;
     display: block;
@@ -210,7 +213,8 @@ p {
     opacity: 0.75;
 }
 
-.contact-form *::placeholder { /* todo los elementos hijos que tengan placeholder*/
+.contact-form *::placeholder {
+    /* todo los elementos hijos que tengan placeholder*/
     color: var(--gray-dark-color);
 }
 
@@ -228,7 +232,8 @@ p {
     fill: var(--first-color);
 }
 
-.modal#gracias:target { /*Cuando tenga el id gracias y le haces click*/
+.modal#gracias:target {
+    /*Cuando tenga el id gracias y le haces click*/
     opacity: 1;
     pointer-events: auto;
 }
@@ -262,6 +267,11 @@ p {
     background-size: cover;
     background-position: center;
     background-attachment: var(--hero-attachment);
+}
+
+.hero-image-content {
+    width: 100%;
+    min-width: 320px;
 }
 
 .hero-image-opacity {
