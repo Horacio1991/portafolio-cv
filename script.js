@@ -18,6 +18,29 @@
   });
 })(document);
 
+/************ Carrusel ************** */
+var slideIndex = 1;
+mostrarSlides(slideIndex);
+
+function cambiarSlide(n) {
+    mostrarSlides(slideIndex += n);
+}
+
+function mostrarSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("carrusel-slide");
+    var descriptions = document.getElementsByClassName("description");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+        descriptions[i].style.display = "none";  // Asegura que las descripciones también se oculten
+    }
+    slides[slideIndex-1].style.display = "block";  
+    descriptions[slideIndex-1].style.display = "block"; // Muestra la descripción asociada
+}
+
+
 /* ********** ContactForm ********** */
 ((d) => {
   const $form = d.querySelector(".contact-form"),
